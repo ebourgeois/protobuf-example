@@ -46,11 +46,11 @@ simple. For example, if here is how you could create an Address object, then set
 this to a Person object:
 
 ```java
-    // 1. Setup the persons address
-    final Address address = Address.newBuilder().setStreet("1 Main Street").setCity("Foo Ville").setCountry("Canada")
-            .setPostalCode("J0J 1H1").build();
+// 1. Setup the persons address
+final Address address = Address.newBuilder().setStreet("1 Main Street").setCity("Foo Ville").setCountry("Canada")
+        .setPostalCode("J0J 1H1").build();
 
-    // 2. Now setup the Person and assign the above address to them.
-    final Person person = Person.newBuilder().setName("Erick").setAge(22).setAddress(address).build();
+// 2. Now setup the Person and assign the above address to them.
+final Person person = Person.newBuilder().setName("Erick").setAge(22).setAddress(address).build();
 ```
 
