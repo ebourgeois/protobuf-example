@@ -96,7 +96,7 @@
                     <exec executable="${proto.executable.path}" failonerror="true" logerror="true" >  
                         <arg value="--proto_path=${basedir}/proto" />
                         <arg value="--java_out=${basedir}/target/generated-sources" />
-                        <arg value="${basedir}/proto/ca.jeb.Person.proto" />
+                        <arg value="${basedir}/proto/ca.jeb.Message.proto" />
                     </exec>
                  </tasks>
                </configuration>

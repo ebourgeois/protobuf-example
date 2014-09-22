@@ -23,7 +23,7 @@ public class GPBPersonExample
     // 1. Setup the persons address
     LOGGER.info("Creating new Address object...");
     final Address address = Address.newBuilder().setStreet("1 Main Street").setCity("Foo Ville").setCountry("Canada")
-            .setPostalCode("J0J0J0").build();
+            .setPostalCode("J0J 1H1").build();
     LOGGER.debug("address: " + address);
 
     // 2. Now setup the Person and assign the above address to them.

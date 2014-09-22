@@ -2,7 +2,7 @@
 <configuration debug="true">
     <property resource="gpb.properties" />
 
-    <contextName>jeb/GPBExample</contextName>
+    <contextName>jeb.ca/GPB-Example</contextName>
  
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
