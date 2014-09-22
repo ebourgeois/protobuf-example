@@ -17,7 +17,7 @@
     </developer>
   </developers>
   <properties>
-    <proto.executable.path>C:\Users\erick\dev\bin\protoc</proto.executable.path>
+    <proto.executable.path>//ms/dist/fsf/PROJ/protoc/2.5.0/exec/bin/protoc</proto.executable.path>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
   </properties>
@@ -33,7 +33,22 @@
       <artifactId>protobuf-java</artifactId>
       <version>2.6.0</version>
     </dependency>
-    <dependency>
+	<dependency>
+	  <groupId>ch.qos.logback</groupId>
+	  <artifactId>logback-core</artifactId>
+	  <version>1.1.2</version>
+	</dependency>
+	<dependency>
+	  <groupId>ch.qos.logback</groupId>
+	  <artifactId>logback-classic</artifactId>
+	  <version>1.1.2</version>
+	</dependency>
+	<dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>log4j-over-slf4j</artifactId>
+      <version>1.7.7</version>
+    </dependency>
+	<dependency>
       <groupId>ca.jeb</groupId>
       <artifactId>common-java</artifactId>
       <version>2014.09.21</version>
@@ -81,7 +96,7 @@
                     <exec executable="${proto.executable.path}" failonerror="true" logerror="true" >  
                         <arg value="--proto_path=${basedir}/proto" />
                         <arg value="--java_out=${basedir}/target/generated-sources" />
-                        <arg value="${basedir}/proto/ca.jeb.Person.proto" />
+                        <arg value="${basedir}/proto/ca.jeb.Message.proto" />
                     </exec>
                  </tasks>
                </configuration>
