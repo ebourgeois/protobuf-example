@@ -1,32 +1,31 @@
 // Copyright (c) 2014 Erick Bourgeois, All Rights Reserved
 
-package ca.jeb.gpb.datamodel;
+package ca.jeb.protobuf.example.datamodel;
 
-import ca.jeb.common.gpb.IProtoBufGenerator;
-import ca.jeb.common.gpb.ProtoBufAttribute;
-import ca.jeb.common.gpb.ProtoBufEntity;
+import ca.jeb.protobuf.ProtobufAttribute;
+import ca.jeb.protobuf.ProtobufEntity;
 
 /**
  * POJO representing an Address
  * 
  * @author <a href="mailto:erick@jeb.ca">Erick Bourgeois</a>
  */
-@ProtoBufEntity(ca.jeb.generated.proto.Message.Address.class)
-public class Address implements IProtoBufGenerator<ca.jeb.generated.proto.Message.Address, Address>
+@ProtobufEntity(ca.jeb.generated.proto.Message.Address.class)
+public class Address
 {
-  @ProtoBufAttribute
+  @ProtobufAttribute
   private String street;
 
-  @ProtoBufAttribute
+  @ProtobufAttribute
   private String city;
 
-  @ProtoBufAttribute
+  @ProtobufAttribute
   private String stateOrProvince;
 
-  @ProtoBufAttribute
+  @ProtobufAttribute
   private String country;
 
-  @ProtoBufAttribute
+  @ProtobufAttribute
   private String postalCode;
 
   /**
@@ -67,6 +66,46 @@ public class Address implements IProtoBufGenerator<ca.jeb.generated.proto.Messag
   public void setPostalCode(String postalCode)
   {
     this.postalCode = postalCode;
+  }
+
+  /**
+   * @return the street
+   */
+  public String getStreet()
+  {
+    return street;
+  }
+
+  /**
+   * @return the city
+   */
+  public String getCity()
+  {
+    return city;
+  }
+
+  /**
+   * @return the stateOrProvince
+   */
+  public String getStateOrProvince()
+  {
+    return stateOrProvince;
+  }
+
+  /**
+   * @return the country
+   */
+  public String getCountry()
+  {
+    return country;
+  }
+
+  /**
+   * @return the postalCode
+   */
+  public String getPostalCode()
+  {
+    return postalCode;
   }
 
   /**

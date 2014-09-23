@@ -1,6 +1,6 @@
 // Copyright (c) 2014 Erick Bourgeois, All Rights Reserved
 
-package ca.jeb.gpb;
+package ca.jeb.protobuf.example;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,9 +11,9 @@ import ca.jeb.generated.proto.Message.Person;
 /**
  * @author <a href="mailto:erick@jeb.ca">Erick Bourgeois</a>
  */
-public class GPBPersonExample
+public class ProtobufPersonExample
 {
-  private static final Logger LOGGER = LoggerFactory.getLogger(GPBPersonExample.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProtobufPersonExample.class);
 
   /**
    * @param args

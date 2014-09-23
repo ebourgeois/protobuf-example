@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ca.jeb</groupId>
   <artifactId>gpb-example</artifactId>
-  <version>2014.09.21</version>
-  <name>Protocol Buffer Examples</name>
-  <description>Protocol Buffer examples by Erick Bourgeois</description>
+  <version>2014.09.23</version>
+  <name>Google Protobuf Examples</name>
+  <description>Google Protobuf examples</description>
   <inceptionYear>2014</inceptionYear>
   <developers>
     <developer>
@@ -29,29 +29,14 @@
   </repositories>
   <dependencies>
     <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java</artifactId>
-      <version>2.6.0</version>
-    </dependency>
-	<dependency>
-	  <groupId>ch.qos.logback</groupId>
-	  <artifactId>logback-core</artifactId>
-	  <version>1.1.2</version>
-	</dependency>
-	<dependency>
-	  <groupId>ch.qos.logback</groupId>
-	  <artifactId>logback-classic</artifactId>
-	  <version>1.1.2</version>
-	</dependency>
-	<dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>log4j-over-slf4j</artifactId>
-      <version>1.7.7</version>
-    </dependency>
-	<dependency>
       <groupId>ca.jeb</groupId>
       <artifactId>common-java</artifactId>
-      <version>2014.09.21</version>
+      <version>2014.09.23</version>
+    </dependency>
+    <dependency>
+      <groupId>ca.jeb</groupId>
+      <artifactId>protobuf-serializer</artifactId>
+      <version>2014.09.23</version>
     </dependency>
   </dependencies>
   <build>
@@ -103,9 +88,28 @@
              </execution>
            </executions>
          </plugin>
+         <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.9.1</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>target/generated-sources</source>
+                            </sources>
+                   </configuration>
+                 </execution>
+               </executions>
+           </plugin>
     </plugins>
     <pluginManagement>
     	<plugins>
+    	   
     		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
     		<plugin>
     			<groupId>org.eclipse.m2e</groupId>
