@@ -17,22 +17,22 @@
     </developer>
   </developers>
   <properties>
-    <proto.executable.path>//ms/dist/fsf/PROJ/protoc/2.5.0/exec/bin/protoc</proto.executable.path>
+    <!--  <proto.executable.path>//ms/dist/fsf/PROJ/protoc/2.5.0/exec/bin/protoc</proto.executable.path>-->
+    <proto.executable.path>C:\Users\erick\dev\bin\protoc</proto.executable.path>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
   </properties>
   <repositories>
       <repository>
-         <id>jeb-common-mvn-repo</id>
+         <id>common-java-mvn-repo</id>
          <url>https://raw.github.com/ebourgeois/common-java/mvn-repo/</url>
+       </repository>
+       <repository>
+         <id>protobuf-serializer-mvn-repo</id>
+         <url>https://raw.github.com/ebourgeois/protobuf-serializer/mvn-repo/</url>
        </repository>
   </repositories>
   <dependencies>
-    <dependency>
-      <groupId>ca.jeb</groupId>
-      <artifactId>common-java</artifactId>
-      <version>2014.09.23</version>
-    </dependency>
     <dependency>
       <groupId>ca.jeb</groupId>
       <artifactId>protobuf-serializer</artifactId>
@@ -89,27 +89,26 @@
            </executions>
          </plugin>
          <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.9.1</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>target/generated-sources</source>
-                            </sources>
-                   </configuration>
-                 </execution>
-               </executions>
-           </plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>1.9.1</version>
+            <executions>
+                <execution>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>add-source</goal>
+                    </goals>
+                    <configuration>
+                        <sources>
+                            <source>target/generated-sources</source>
+                        </sources>
+               </configuration>
+             </execution>
+           </executions>
+       </plugin>
     </plugins>
     <pluginManagement>
     	<plugins>
-    	   
     		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
     		<plugin>
     			<groupId>org.eclipse.m2e</groupId>
@@ -135,6 +134,20 @@
     								<ignore></ignore>
     							</action>
     						</pluginExecution>
+    						<pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.codehaus.mojo</groupId>
+                                    <artifactId>build-helper-maven-plugin</artifactId>
+                                    <versionRange>[1.0,)</versionRange>
+                                    <goals>
+                                        <goal>test-compile</goal>
+                                        <goal>add-source</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute />
+                                </action>
+                            </pluginExecution>
     					</pluginExecutions>
     				</lifecycleMappingMetadata>
     			</configuration>
