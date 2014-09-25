@@ -21,6 +21,8 @@ public class ProtobufSerializerExample
    */
   public static void main(String[] args)
   {
+    final ProtobufSerializer serializer = new ProtobufSerializer();
+
     try
     {
       // 1. Setup the a Pojo Address
@@ -33,8 +35,7 @@ public class ProtobufSerializerExample
       address.setCountry("Canada");
 
       LOGGER.info("Serializing Address...");
-      final ProtobufSerializer<ca.jeb.generated.proto.Message.Address, Address> serializer = new ProtobufSerializer<>();
-      final ca.jeb.generated.proto.Message.Address protoBufAddress = serializer.toProtoBuf(address);
+      final ca.jeb.generated.proto.Message.Address protoBufAddress = (ca.jeb.generated.proto.Message.Address)serializer.toProtobuf(address);
       LOGGER.debug("protoBufAddress: " + protoBufAddress);
 
       // 2. Setup the a Pojo Person
@@ -45,8 +46,7 @@ public class ProtobufSerializerExample
       person.setAddress(address);
 
       LOGGER.info("Serializing Person...");
-      final ProtobufSerializer<ca.jeb.generated.proto.Message.Person, Person> pSerializer = new ProtobufSerializer<>();
-      final ca.jeb.generated.proto.Message.Person protoBufPerson = pSerializer.toProtoBuf(person);
+      final ca.jeb.generated.proto.Message.Person protoBufPerson = (ca.jeb.generated.proto.Message.Person)serializer.toProtobuf(person);
       LOGGER.debug("protoBufPerson: " + protoBufPerson);
     }
     catch (Exception e)
