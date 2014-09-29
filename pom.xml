@@ -79,9 +79,9 @@
                     <mkdir dir="${basedir}/target/generated-sources" />
                     <echo>Generating Google Protbuf classes...</echo> 
                     <exec executable="${proto.executable.path}" failonerror="true" logerror="true" >  
-                        <arg value="--proto_path=${basedir}/proto" />
+                        <arg value="--proto_path=${basedir}/main/resources/proto" />
                         <arg value="--java_out=${basedir}/target/generated-sources" />
-                        <arg value="${basedir}/proto/ca.jeb.Message.proto" />
+                        <arg value="${basedir}/src/main/resources/proto/ca.jeb.Message.proto" />
                     </exec>
                  </tasks>
                </configuration>
