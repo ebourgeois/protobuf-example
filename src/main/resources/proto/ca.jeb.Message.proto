@@ -8,6 +8,7 @@ message Address
     optional string stateOrProvince = 3;
     optional string country = 4;
     optional string postalCode = 5;
+    optional bool isCanada = 6;
 }
 message Person
 {
