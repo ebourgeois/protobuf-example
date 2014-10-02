@@ -17,8 +17,8 @@
     </developer>
   </developers>
   <properties>
-    <proto.executable.path>C:\Users\boureric\dev\bin\protoc</proto.executable.path> 
-    <!-- <proto.executable.path>C:\Users\erick\dev\bin\protoc</proto.executable.path> -->
+    <!-- <proto.executable.path>C:\Users\boureric\dev\bin\protoc</proto.executable.path> --> 
+    <proto.executable.path>C:\Users\erick\dev\bin\protoc</proto.executable.path>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
   </properties>
