@@ -3,11 +3,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>ca.jeb</groupId>
-  <artifactId>gpb-example</artifactId>
-  <version>2014.09.30</version>
-  <name>Google Protobuf Examples</name>
+  <artifactId>protobuf-example</artifactId>
+  <version>2014.10.02</version>
+  <name>${project.groupId}:${project.artifactId}</name>
   <description>Google Protobuf examples</description>
   <inceptionYear>2014</inceptionYear>
+  <url>https://github.com/ebourgeois/protobuf-example</url>
   <developers>
     <developer>
         <id>ebourgeois</id>
@@ -16,27 +17,28 @@
         <url>https://github.com/ebourgeois</url>
     </developer>
   </developers>
+  <licenses>
+    <license>
+        <name>GNU General Public License</name>
+        <url>https://gnu.org/licenses/gpl-3.0.txt</url>
+    </license>
+  </licenses>
+  <scm>
+      <connection>scm:git:git://github.com/ebourgeois/protobuf-example.git</connection>
+      <developerConnection>scm:git:git@github.com:ebourgeois/protobuf-example.git</developerConnection>
+      <url>http://github.com/ebourgeois/protobuf-example/master</url>
+  </scm>
   <properties>
     <!-- <proto.executable.path>C:\Users\boureric\dev\bin\protoc</proto.executable.path> --> 
     <proto.executable.path>C:\Users\erick\dev\bin\protoc</proto.executable.path>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
   </properties>
-  <repositories>
-      <repository>
-         <id>common-java-mvn-repo</id>
-         <url>https://raw.github.com/ebourgeois/common-java/mvn-repo/</url>
-       </repository>
-       <repository>
-         <id>protobuf-serializer-mvn-repo</id>
-         <url>https://raw.github.com/ebourgeois/protobuf-serializer/mvn-repo/</url>
-       </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>ca.jeb</groupId>
       <artifactId>protobuf-serializer</artifactId>
-      <version>2014.09.29</version>
+      <version>2014.10.01</version>
     </dependency>
   </dependencies>
   <build>
